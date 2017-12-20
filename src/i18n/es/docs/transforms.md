@@ -1,8 +1,8 @@
 # 🐠 Transformaciones
 
-Mientras que muchos empaquetdores requieren la instalación y configurción de los _plugins_ para transformar los recursos, Parcel cuenta con soporte para múltiples trasnsformadores y transpiladores comúnmente utilizados. Puede transformar JavaScript usando [Babel](https://babeljs.io), CSS usando [PostCSS](http://postcss.org), y HTML usando [PostHTML](https://github.com/posthtml/posthtml).
+Mientras que muchos empaquetadores requieren la instalación y configurción de los _plugins_ para transformar los recursos, Parcel cuenta con soporte para múltiples transformadores y transpiladores comúnmente utilizados. Puede transformar JavaScript usando [Babel](https://babeljs.io), CSS usando [PostCSS](http://postcss.org), y HTML usando [PostHTML](https://github.com/posthtml/posthtml).
 
-Esto funciona inclusive en `node_modules` de terceros: si se cuenta con un archivo de configuración provisto por el paquete, la transformación es encendida automáticamente para este módulo únicamente. Esto mantiene el empaquetamiento rápido, dado que solo los módulos que requieren ser transformados son procesados. Esto también significa que no debe configurar las transformaciones manualmente para incluir ciertos archivos, ni conocer como el código del tercero es construido para ser utilizado en su aplicación.
+Esto funciona inclusive en `node_modules` de terceros: si se cuenta con un archivo de configuración provisto por el paquete, la transformación es habilitada automáticamente para este módulo únicamente. Esto mantiene el empaquetamiento rápido, dado que solo los módulos que requieren ser transformados son procesados. Esto también significa que no debe configurar las transformaciones manualmente para incluir ciertos archivos, ni conocer como el código del tercero es construido para ser utilizado en su aplicación.
 
 ## Babel
 
@@ -23,8 +23,6 @@ Luego, crear un archivo `.babelrc`:
 ```
 
 ## PostCSS
-
-[PostCSS](http://postcss.org) is a tool for transforming CSS with plugins, like [autoprefixer](https://github.com/postcss/autoprefixer), [cssnext](http://cssnext.io/), and [CSS Modules](https://github.com/css-modules/css-modules). You can configure PostCSS with Parcel by creating a configuration file using one of these names: `.postcssrc` (JSON), `.postcssrc.js`, or `postcss.config.js`.
 
 [PostCSS](http://postcss.org) es una herramienta para transformar CSS con _plugins_, como, [autoprefixer](https://github.com/postcss/autoprefixer), [cssnext](http://cssnext.io/), y [CSS Modules](https://github.com/css-modules/css-modules). Puede configurar PostCSS con Parcel creando un archivo de configuración con alguno de los siguientes nombres: `.postcssrc` (JSON), `.postcssrc.js`, o `postcss.config.js`.
 
