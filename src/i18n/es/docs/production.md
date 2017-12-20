@@ -1,25 +1,25 @@
-# ✨ Production
+# ✨ Producción
 
-When it comes time to bundle your application for production, you can use Parcel's production mode.
+Cuando llega el momento de empaquetar su aplicación para producción, se puede usar el modo de producción de Parcel.
 
 ```bash
 parcel build entry.js
 ```
 
-This disables watch mode and hot module replacement so it will only build once. It also enables the minifier for all output bundles to reduce file size. The minifiers used by Parcel are [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony) for JavaScript, [cssnano](http://cssnano.co) for CSS, and [htmlnano](https://github.com/posthtml/htmlnano) for HTML.
+Esto deshabilita el modo de observación y _hot module replacement_ para que se construya una única vez. También se habilita el minificador para todas las salidas empaquetadas, reduciendo el tamaño del archivo. Los minificadores usados por Parcel son [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony) para JavaScript, [cssnano](http://cssnano.co) para CSS, y [htmlnano](https://github.com/posthtml/htmlnano) para HTML.
 
-Enabling production mode also sets the `NODE_ENV=production` environment variable. Large libraries like React have development only debugging features which are disabled by setting this environment variable, which results in smaller and faster builds for production.
+Habilitando el modo de producción también asigna la variable de entorno `NODE_ENV=production`. Librerías grandes como React tienen caracteristicas de _debugging_ que son solo para desarrollo y estas quedan deshabilitadas al asignar esta variable de entorno, lo que resulta en construcciones más pequeñas y rápidas para producción.
 
 
-### Options
+### Opciones
 
-#### Set the output directory
+#### Asignar el directorio de salida
 
-Default: "dist"
+Por defecto: "dist"
 
 ```bash
 parcel build entry.js --out-dir build/output
-or
+o
 parcel build entry.js -d build/output
 ```
 
@@ -30,33 +30,33 @@ root
 - - - entry.js
 ```
 
-#### Set the public URL to serve on
+#### Asignar el URL público para servir la aplicación
 
-Default: --out-dir option
+Por defecto: --out-dir option
 
 ```bash
 parcel build entry.js --public-url ./
 ```
 
-will output:
+Produce:
 
 ```html
 <link rel="stylesheet" type="text/css" href="1a2b3c4d.css">
-or
+o
 <script src="e5f6g7h8.js"></script>
 ```
 
 
-#### Disable minification
+#### Deshabilitar la minificación
 
-Default: minification enabled
+Por defecto: La minificación está habilitada
 
 ```
 parcel build entry.js --no-minify
 ```
 
-#### Disable the filesystem cache
-Default: cache enabled
+#### Deshabilitar el cache en el sistema de archivos
+Por defecto: El cache está habilitado
 
 ```bash
 parcel build entry.js --no-cache
