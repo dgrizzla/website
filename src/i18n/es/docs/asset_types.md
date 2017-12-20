@@ -1,8 +1,8 @@
-# 📝 Tipo de Assets
+# 📝 Tipos de Assets
 
 Como se describe en la [documentación de los assets](assets.html), Parcel representa cada archivo como un `Asset`. Los tipos de Assets son representados como clases heredadas de la clase base `Asset` e implementando la interface requerida para interpretar, analizar dependencias, transformar y generar código.
 
-Debido a que parcel procesa los assets en paralelo a través de múltiples núcleos, las transformaciones que pueden hacer los tipos de assets son limitados a esos que operan en un solo archivo a la vez. Para las transformaciones a través de múltiples archivos, un [Packager](packagers.html) personalizado puede ser usado.
+Debido a que parcel procesa los assets en paralelo a través de múltiples núcleos, las transformaciones que pueden hacer los tipos de assets son limitadas a esos que operan en un solo archivo a la vez. Para las transformaciones a través de múltiples archivos, un [Packager](packagers.html) personalizado puede ser usado.
 
 ## Interface de Asset
 
