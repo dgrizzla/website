@@ -1,6 +1,6 @@
 # ✨ Producción
 
-Cuando llega el momento empaquetar su aplicación para producción, se puede usar el modo de producción de Parcel.
+Cuando llega el momento de empaquetar su aplicación para producción, se puede usar el modo de producción de Parcel.
 
 ```bash
 parcel build entry.js
@@ -8,7 +8,7 @@ parcel build entry.js
 
 Esto deshabilita el modo de observación y _hot module replacement_ para que se construya una única vez. También se habilita el minificador para todas las salidas empaquetadas, reduciendo el tamaño del archivo. Los minificadores usados por Parcel son [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony) para JavaScript, [cssnano](http://cssnano.co) para CSS, y [htmlnano](https://github.com/posthtml/htmlnano) para HTML.
 
-Habilitando el modo de producción también asigna la variable de entorno `NODE_ENV=production`. Librerías grandes como React tienen caracteristicas de _debugging_ solo para desarrollo, quedando deshabilitadas al asignar esta variable de entorno, lo que resulta en construcciones más pequeñas y rápidas para producción.
+Habilitando el modo de producción también asigna la variable de entorno `NODE_ENV=production`. Librerías grandes como React tienen caracteristicas de _debugging_ que son solo para desarrollo y estas quedan deshabilitadas al asignar esta variable de entorno, lo que resulta en construcciones más pequeñas y rápidas para producción.
 
 
 ### Opciones
@@ -49,7 +49,7 @@ o
 
 #### Deshabilitar la minificación
 
-POr defecto: La minificación está habilitada
+Por defecto: La minificación está habilitada
 
 ```
 parcel build entry.js --no-minify
