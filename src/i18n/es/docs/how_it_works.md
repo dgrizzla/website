@@ -1,19 +1,19 @@
-# 🛠 How It Works
+# 🛠 Como Funciona
 
-Parcel transforms a tree of **assets** to a tree of **bundles**. Many other bundlers are fundamentally based around JavaScript assets, with other formats tacked on - e.g. inlined as strings into JS files. Parcel is file-type agnostic - it will work with any type of assets the way you'd expect, with no configuration. There are three steps to Parcel's bundling process.
+Parcel transforma un árbol de **recursos**(_assets_) a un árbol de **bundles**. Muchos otros _bundlers_ están hechos fundamentalmente para recursos de JavaScript, con otros formatos incluidos - e.g. agregados como cadenas en los archivos JS. Parceles agnóstico en cuanto al tipo de archivo - funciona con cualquier tipo de recurso en la manera que se espera, sin configuración. Hay tres pasos en el proceso de construcción con Parcel.
 
-### 1. Constructing the Asset Tree
+### 1. Construyendo el Árbol de Recursos
 
-Parcel takes as input a single entry asset, which could be any type: a JS file, HTML, CSS, image, etc. There are various [asset types](asset_types.html) defined in Parcel which know how to handle specific file types. The assets are parsed, their dependencies are  extracted, and they are transformed to their final compiled form. This creates a tree of assets.
+Parcel toma como entrada un único recurso, que puede ser de cualquier tipo: un archivo JS, HTML, CSS, imagen, etc. Existen varios [tipos de recursos](asset_types.html) definidos en Parcel que saben como manejar tipos de archivo específicos. Los recursos son analizados, sus dependencias extraidas, y son transformados a su forma final compilada.. Esto crea el árbol de recursos.
 
-### 2. Constructing the Bundle Tree
+### 2. Construyendo el Árbol del _Bundle_
 
-Once the asset tree has been constructed, the assets are placed into a bundle tree. A bundle is created for the entry asset, and child bundles are created for dynamic `import()`s, which cause code splitting to occur.
+Una vez que se ha construido el árbol de recursos, los reecursos son colocados en un árbol de _bundle_. Un _bundle_ es creado para el recurso de entrada, y _bundles_ hijos son creados para los `import()` dinámicos, que causan que la separación del código ocurra. 
 
-Sibling bundles are created when assets of a different type are imported, for example if you imported a CSS file from JavaScript, it would be placed into a sibling bundle to the corresponding JavaScript.
+_Bundles_ hermanos son creados cuando los recursos de distintos tipos son importados, por ejemplo si se importa un archivo CSS desde Javascript, sería colocado en un _bundle_ hermano al JavaScript correspondiente.
 
-If an asset is required in more than one bundle, it is hoisted up to the nearest common ancestor in the bundle tree so it is not included more than once.
+Si un recurso es requerido en más de un _bundle_, es elevado al ancestro más cercano en el árbol de _bundle_ para no ser incluido más de una vez.
 
-### 3. Packaging
+### 3. Empaquetamiento
 
-After the bundle tree is constructed, each bundle is written to a file by a [packager](packagers.html) specific to the file type. The packagers know how to combine the code from each asset together into the final file that is loaded by a browser.
+Luego de haber construido el _bundle_, cada _bundle_ es escrito a un archivo por un [empaquetador](packagers.html) específico a este tipo de archivo. Los empaquetadores saben como combinar el código de cada recurso en un solo archivo final que es cargado por el navegador.
