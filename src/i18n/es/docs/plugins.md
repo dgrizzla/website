@@ -6,7 +6,7 @@ Cuando se agrega soporte para un nuevo formato de archivo en Parcel, se debe con
 
 ## API de Plugins
 
-Los plugins en Parcel son muy simples. Son nada más módulos que exportan una sola función, que es llamada por Parcel automáticamente durante la inicialización. La función recibe como entrada el objeto `Boundler`, y puede realizar configuraciones tales como registrar tipos de recursos(_asseets_) y empaquetadores(_packagers_).
+Los plugins en Parcel son muy simples. Son nada más módulos que exportan una sola función, que es llamada por Parcel automáticamente durante la inicialización. La función recibe como entrada el objeto `Bundler`, y puede realizar configuraciones tales como registrar tipos de recursos(_asseets_) y empaquetadores(_packagers_).
 
 ```javascript
 module.exports = function (bundler) {
