@@ -1,4 +1,4 @@
-# 📦 EMpaquetadores
+# 📦 Empaquetadores
 
 En Parcel, un `Packager`(Empaquetador) combina distintos `Asset`s(Recursos) en un único paquete de salida. Esto sucede en el proceso principal después de haber procesado todos los recursos y haber creado un árbol(colección ordenada de los recursos) del paquete.  Los empaquetadores son registrados según el tipo de salida, y los recursos que han generado ese tipo de salida son enviados al empaquetador para la producción del archivo final de salida.
 
