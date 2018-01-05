@@ -1,8 +1,8 @@
 # 🔌 Plugins
 
-Parcel difiere de otras herramientas en el tanto que muchos formatos comunes son incluidos sin la necesidad de instalar o configurar _plugins_ adicionales. Sin embargo, existen casos en los que se quiere extender Parcel en formas no-estándar, para estos casos, los _plugins_ son soportados. Los _plugins_ instalados son automáticamente detectados y cargados según las depedencias en `package.json`.
+Parcel difiere de otras herramientas en la forma en que muchos formatos comunes son incluidos sin la necesidad de instalar o configurar _plugins_ adicionales. Sin embargo, existen casos en los que usted quisiera extender Parcel en formas no-estándar, para estos casos, los _plugins_ son soportados. Los _plugins_ instalados son automáticamente detectados y cargados según las dependencias en `package.json`.
 
-Cuando se agrega soporte para un nuevo formato de archivo en Parcel, se debe considerar inicialmente que tan adoptado se encuentra el formato, y que tan estandarizada es su implementación. Si es suficientemente adoptado y estaandarizado, el formato probablemente debería ser agregado al núcleo de Parcel y no implementado como un plugin que los usuarios deban instalar. Si se tienen dudas, [GitHub](https://github.com/parcel-bundler/parcel/issues) es el lugar correcto para discutirlas.
+Cuando se agrega soporte para un nuevo formato de archivo en Parcel, se debe considerar inicialmente que tan adoptado se encuentra el formato, y que tan estandarizada es su implementación. Si es suficientemente adoptado y estandarizado, el formato probablemente debería ser agregado al núcleo de Parcel y no implementado como un plugin que los usuarios deban instalar. Si se tienen dudas, [GitHub](https://github.com/parcel-bundler/parcel/issues) es el lugar correcto para discutirlas.
 
 ## API de Plugins
 
@@ -15,7 +15,7 @@ module.exports = function (bundler) {
 };
 ```
 
-Se publica este paquete en npm usando el prefijo `parcel-plugin-`, y será automáticamente detectado y cargado como se describe a continuación.
+Publique este paquete en npm usando el prefijo `parcel-plugin-`, y será automáticamente detectado y cargado como se describe a continuación.
 
 ## Usando Plugins
 
